@@ -12,7 +12,7 @@ Group(pt_BR):	Bibliotecas
 Group(ru):	Библиотеки
 Group(uk):	Б╕бл╕отеки
 URL:		http://www.sleepycat.com
-Source0:	http://www.sleepycat.com/update/%{version}/db.%{version}.tar.gz
+Source0:	http://www.sleepycat.com/update/snapshot/db.%{version}.tar.gz
 Patch0:		%{name}.patch
 Conflicts:	glibc < 2.1.90
 BuildConflicts:	glibc-db1
