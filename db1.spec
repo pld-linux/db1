@@ -85,7 +85,7 @@ u¿ywaj±cych Berkeley DB.
 
 %build
 cd PORT/linux
-%{__make} OORG="%{rpmcflags}"
+%{__make} CC=%{__cc} OORG="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
