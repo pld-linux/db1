@@ -105,8 +105,6 @@ install ../../include/mpool.h	$RPM_BUILD_ROOT/%{_includedir}/db1/
 install db_dump185		$RPM_BUILD_ROOT/%{_bindir}/db1_dump185
 cd ../..
 
-gzip -9nf docs/*.ps README LICENSE changelog
-
 %clean
 rm -rf ${RPM_BUILD_ROOT}
 
@@ -115,13 +113,13 @@ rm -rf ${RPM_BUILD_ROOT}
 
 %files
 %defattr(644,root,root,755)
-%doc {README,LICENSE,changelog}.gz
+%doc README LICENSE changelog
 %attr(755,root,root) %{_libdir}/libdb*.so.*
 %attr(755,root,root) %{_bindir}/db1_dump185
 
 %files devel
 %defattr(644,root,root,755)
-%doc docs/*.ps.gz
+%doc docs/*.ps
 %attr(755,root,root) %{_libdir}/libdb1.so
 %{_includedir}/db1
 
