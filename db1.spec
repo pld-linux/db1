@@ -84,7 +84,7 @@ ln -sf libdb1.so.$sover		$RPM_BUILD_ROOT/%{_libdir}/libdb.so.$sover
 install ../include/ndbm.h	$RPM_BUILD_ROOT/%{_includedir}/db1/
 install ../../include/db.h	$RPM_BUILD_ROOT/%{_includedir}/db1/
 install ../../include/mpool.h	$RPM_BUILD_ROOT/%{_includedir}/db1/
-install -s db_dump185		$RPM_BUILD_ROOT/%{_bindir}/db1_dump185
+install db_dump185		$RPM_BUILD_ROOT/%{_bindir}/db1_dump185
 cd ../..
 
 gzip -9nf docs/*.ps README LICENSE changelog
