@@ -10,8 +10,8 @@ Source0:	http://www.sleepycat.com/update/snapshot/db.%{version}.tar.gz
 # Source0-md5:	42cc6c1e1e25818bd3e3f91328edb0f1
 Patch0:		%{name}.patch
 URL:		http://www.sleepycat.com/
-Conflicts:	glibc < 2.1.90
 BuildConflicts:	glibc-db1
+Conflicts:	glibc < 2.1.90
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	glibc-db1
 
@@ -97,14 +97,14 @@ sed -n '/^\/\*-/,/^ \*\//s/^.\*.\?//p' include/db.h | grep -v '^@.*db\.h' > LICE
 
 cd PORT/linux
 sover=`echo libdb.so.* | sed 's/libdb.so.//'`
-install libdb.a			$RPM_BUILD_ROOT/%{_libdir}/libdb1.a
-install libdb.so.$sover		$RPM_BUILD_ROOT/%{_libdir}/libdb1.so.$sover
-ln -sf libdb1.so.$sover 	$RPM_BUILD_ROOT/%{_libdir}/libdb1.so
-ln -sf libdb1.so.$sover		$RPM_BUILD_ROOT/%{_libdir}/libdb.so.$sover
-install ../include/ndbm.h	$RPM_BUILD_ROOT/%{_includedir}/db1/
-install ../../include/db.h	$RPM_BUILD_ROOT/%{_includedir}/db1/
-install ../../include/mpool.h	$RPM_BUILD_ROOT/%{_includedir}/db1/
-install db_dump185		$RPM_BUILD_ROOT/%{_bindir}/db1_dump185
+install libdb.a			$RPM_BUILD_ROOT%{_libdir}/libdb1.a
+install libdb.so.$sover		$RPM_BUILD_ROOT%{_libdir}/libdb1.so.$sover
+ln -sf libdb1.so.$sover 	$RPM_BUILD_ROOT%{_libdir}/libdb1.so
+ln -sf libdb1.so.$sover		$RPM_BUILD_ROOT%{_libdir}/libdb.so.$sover
+install ../include/ndbm.h	$RPM_BUILD_ROOT%{_includedir}/db1/
+install ../../include/db.h	$RPM_BUILD_ROOT%{_includedir}/db1/
+install ../../include/mpool.h	$RPM_BUILD_ROOT%{_includedir}/db1/
+install db_dump185		$RPM_BUILD_ROOT%{_bindir}/db1_dump185
 cd ../..
 
 %clean
