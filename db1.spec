@@ -1,27 +1,30 @@
 Summary:	BSD database library for C
 Name:		db1
 Version:	1.85
-Release:	1
-Group:		Libraries
+Release:	6
 License:	BSD
+Group:		Libraries
+Group(de):	Libraries
+Group(fr):	Librairies
+Group(pl):	Biblioteki
 URL:		http://www.sleepycat.com
 Source0:	http://www.sleepycat.com/update/%{version}/db.%{version}.tar.gz
-Patch0:		db.%{version}.patch
-PreReq:		/sbin/ldconfig
+Patch0:		%{name}.patch
 Conflicts:	glibc < 2.1.90
-Obsoletes:	glibc-db1
-Provides:	glibc-db1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	glibc-db1
 
 %description
-The Berkeley Database (Berkeley DB) is a programmatic toolkit that provides
-embedded database support for both traditional and client/server applications.
-It should be installed if compatibility is needed with databases created with
-db1. This library used to be part of the glibc package.
+The Berkeley Database (Berkeley DB) is a programmatic toolkit that
+provides embedded database support for both traditional and
+client/server applications. It should be installed if compatibility is
+needed with databases created with db1. This library used to be part
+of the glibc package.
 
 %package devel
 Summary:	Development libraries and header files for Berkeley database library
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
@@ -29,10 +32,10 @@ Conflicts:	glibc-devel < 2.1.90
 Obsoletes:	glibc-db1-devel
 
 %description devel
-The Berkeley Database (Berkeley DB) is a programmatic toolkit that provides
-embedded database support for both traditional and client/server applications.
-Berkeley DB includes B tree, Hashing, Fixed and Variable-length record access
-methods.
+The Berkeley Database (Berkeley DB) is a programmatic toolkit that
+provides embedded database support for both traditional and
+client/server applications. Berkeley DB includes B tree, Hashing,
+Fixed and Variable-length record access methods.
 
 This package contains the header files, libraries, and documentation
 for building programs which use Berkeley DB.
@@ -40,6 +43,7 @@ for building programs which use Berkeley DB.
 %package static
 Summary:	Static libraries for Berkeley database library
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
@@ -47,13 +51,13 @@ Conflicts:	glibc-static < 2.1.90
 Obsoletes:	glibc-db1-static
 
 %description static
-The Berkeley Database (Berkeley DB) is a programmatic toolkit that provides
-embedded database support for both traditional and client/server applications.
-Berkeley DB includes B tree, Hashing, Fixed and Variable-length record access
-methods.
+The Berkeley Database (Berkeley DB) is a programmatic toolkit that
+provides embedded database support for both traditional and
+client/server applications. Berkeley DB includes B tree, Hashing,
+Fixed and Variable-length record access methods.
 
-This package contains the static libraries for building programs which use
-Berkeley DB.
+This package contains the static libraries for building programs which
+use Berkeley DB.
 
 %prep
 %setup -q -n db.%{version}
@@ -81,15 +85,12 @@ install ../../include/mpool.h	$RPM_BUILD_ROOT/%{_includedir}/db1/
 install -s db_dump185		$RPM_BUILD_ROOT/%{_bindir}/db1_dump185
 cd ../..
 
-strip --strip-unneeded $RPM_BUILD_ROOT%{_bindir}/*
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*
-
 gzip -9nf docs/*.ps README LICENSE changelog
 
 %clean
 rm -rf ${RPM_BUILD_ROOT}
 
-%post -p /sbin/ldconfig
+%post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %files
