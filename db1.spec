@@ -1,13 +1,16 @@
 Summary:	BSD database library for C
 Name:		db1
 Version:	1.85
-Release:	7
+Release:	8
 License:	BSD
 Group:		Libraries
 Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	Библиотеки
+Group(uk):	Б╕бл╕отеки
 URL:		http://www.sleepycat.com
 Source0:	http://www.sleepycat.com/update/%{version}/db.%{version}.tar.gz
 Patch0:		%{name}.patch
@@ -27,8 +30,12 @@ of the glibc package.
 Summary:	Development libraries and header files for Berkeley database library
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 Conflicts:	glibc-devel < 2.1.90
 Obsoletes:	glibc-db1-devel
@@ -46,8 +53,12 @@ for building programs which use Berkeley DB.
 Summary:	Static libraries for Berkeley database library
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 Conflicts:	glibc-static < 2.1.90
 Obsoletes:	glibc-db1-static
