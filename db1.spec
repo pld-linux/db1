@@ -1,7 +1,7 @@
 Summary:	BSD database library for C
 Name:		db1
 Version:	1.85
-Release:	6
+Release:	7
 License:	BSD
 Group:		Libraries
 Group(de):	Libraries
@@ -11,6 +11,7 @@ URL:		http://www.sleepycat.com
 Source0:	http://www.sleepycat.com/update/%{version}/db.%{version}.tar.gz
 Patch0:		%{name}.patch
 Conflicts:	glibc < 2.1.90
+BuildConflicts:	glibc-db1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	glibc-db1
 
