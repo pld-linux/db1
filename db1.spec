@@ -1,7 +1,7 @@
 Summary:	BSD database library for C
 Name:		db1
 Version:	1.85
-Release:	0.2
+Release:	1
 Group:		Libraries
 License:	BSD
 URL:		http://www.sleepycat.com
@@ -9,6 +9,8 @@ Source0:	http://www.sleepycat.com/update/%{version}/db.%{version}.tar.gz
 Patch0:		db.%{version}.patch
 PreReq:		/sbin/ldconfig
 Conflicts:	glibc < 2.1.90
+Obsoletes:	glibc-db1
+Provides:	glibc-db1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,6 +26,7 @@ Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 Conflicts:	glibc-devel < 2.1.90
+Obsoletes:	glibc-db1-devel
 
 %description devel
 The Berkeley Database (Berkeley DB) is a programmatic toolkit that provides
@@ -41,6 +44,7 @@ Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 Conflicts:	glibc-static < 2.1.90
+Obsoletes:	glibc-db1-static
 
 %description static
 The Berkeley Database (Berkeley DB) is a programmatic toolkit that provides
