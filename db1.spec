@@ -5,7 +5,7 @@ Version:	1.85
 Release:	8
 License:	BSD
 Group:		Libraries
-Source0:	http://www.berkeleydb.com/update/%{version}/db.%{version}.tar.gz
+Source0:	http://www.berkeleydb.com/update/snapshot/db.%{version}.tar.gz
 Patch0:		%{name}.patch
 URL:		http://www.berkeleydb.com/
 Conflicts:	glibc < 2.1.90
