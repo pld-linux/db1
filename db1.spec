@@ -7,6 +7,7 @@ License:	BSD
 Group:		Libraries
 # alternative site (sometimes working): http://www.berkeleydb.com/
 Source0:	http://www.sleepycat.com/update/snapshot/db.%{version}.tar.gz
+# Source0-md5:	42cc6c1e1e25818bd3e3f91328edb0f1
 Patch0:		%{name}.patch
 URL:		http://www.sleepycat.com/
 Conflicts:	glibc < 2.1.90
