@@ -5,6 +5,7 @@ Release:	7
 License:	BSD
 Group:		Libraries
 Group(de):	Libraries
+Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
 URL:		http://www.sleepycat.com
@@ -66,7 +67,7 @@ use Berkeley DB.
 
 %build
 cd PORT/linux
-%{__make} OORG="$RPM_OPT_FLAGS"
+%{__make} OORG="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
