@@ -12,9 +12,9 @@ Group(pl):	Biblioteki
 Group(pt_BR):	Bibliotecas
 Group(ru):	Библиотеки
 Group(uk):	Б╕бл╕отеки
-URL:		http://www.sleepycat.com
-Source0:	http://www.sleepycat.com/update/%{version}/db.%{version}.tar.gz
+Source0:	http://www.berkeleydb.com/update/%{version}/db.%{version}.tar.gz
 Patch0:		%{name}.patch
+URL:		http://www.berkeleydb.com/
 Conflicts:	glibc < 2.1.90
 BuildConflicts:	glibc-db1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
