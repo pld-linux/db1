@@ -93,7 +93,7 @@ u¿ywaj±cych Berkeley DB.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}/{include/db1,lib,bin}
+install -d $RPM_BUILD_ROOT{%{_includedir}/db1,%{_libdir},%{_bindir}}
 
 sed -n '/^\/\*-/,/^ \*\//s/^.\*.\?//p' include/db.h | grep -v '^@.*db\.h' > LICENSE
 
@@ -103,14 +103,14 @@ install libdb.a			$RPM_BUILD_ROOT%{_libdir}/libdb1.a
 install libdb.so.$sover		$RPM_BUILD_ROOT%{_libdir}/libdb1.so.$sover
 ln -sf libdb1.so.$sover 	$RPM_BUILD_ROOT%{_libdir}/libdb1.so
 ln -sf libdb1.so.$sover		$RPM_BUILD_ROOT%{_libdir}/libdb.so.$sover
-install ../include/ndbm.h	$RPM_BUILD_ROOT%{_includedir}/db1/
-install ../../include/db.h	$RPM_BUILD_ROOT%{_includedir}/db1/
-install ../../include/mpool.h	$RPM_BUILD_ROOT%{_includedir}/db1/
+install ../include/ndbm.h	$RPM_BUILD_ROOT%{_includedir}/db1
+install ../../include/db.h	$RPM_BUILD_ROOT%{_includedir}/db1
+install ../../include/mpool.h	$RPM_BUILD_ROOT%{_includedir}/db1
 install db_dump185		$RPM_BUILD_ROOT%{_bindir}/db1_dump185
 cd ../..
 
 %clean
-rm -rf ${RPM_BUILD_ROOT}
+rm -rf $RPM_BUILD_ROOT
 
 %post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
@@ -118,8 +118,8 @@ rm -rf ${RPM_BUILD_ROOT}
 %files
 %defattr(644,root,root,755)
 %doc README LICENSE changelog
-%attr(755,root,root) %{_libdir}/libdb*.so.*
 %attr(755,root,root) %{_bindir}/db1_dump185
+%attr(755,root,root) %{_libdir}/libdb*.so.*
 
 %files devel
 %defattr(644,root,root,755)
