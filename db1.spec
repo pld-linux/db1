@@ -6,14 +6,15 @@ Release:	8
 License:	BSD
 Group:		Libraries
 # alternative site (sometimes working): http://www.berkeleydb.com/
-Source0:	http://www.sleepycat.com/update/snapshot/db.%{version}.tar.gz
+#Source0Download: http://dev.sleepycat.com/downloads/releasehistorybdb.html
+Source0:	http://downloads.sleepycat.com/db.%{version}.tar.gz
 # Source0-md5:	42cc6c1e1e25818bd3e3f91328edb0f1
 Patch0:		%{name}.patch
 URL:		http://www.sleepycat.com/
 BuildConflicts:	glibc-db1
 Conflicts:	glibc < 2.1.90
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	glibc-db1
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The Berkeley Database (Berkeley DB) is a programmatic toolkit that
@@ -33,7 +34,7 @@ glibc.
 Summary:	Header files for Berkeley database library
 Summary(pl):	Pliki nag³ówkowe do biblioteki Berkeley Database
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Conflicts:	glibc-devel < 2.1.90
 Obsoletes:	glibc-db1-devel
 
@@ -59,7 +60,7 @@ programów u¿ywaj±cych Berkeley DB.
 Summary:	Static libraries for Berkeley database library
 Summary(pl):	Statyczne biblioteki Berkeley Database
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 Conflicts:	glibc-static < 2.1.90
 Obsoletes:	glibc-db1-static
 
