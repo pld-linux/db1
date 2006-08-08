@@ -84,7 +84,7 @@ u¿ywaj±cych Berkeley DB.
 
 %prep
 %setup -q -n db.%{version}
-%patch -p1
+%patch0 -p1
 
 %build
 %{__make} -C PORT/linux \
