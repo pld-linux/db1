@@ -1,5 +1,5 @@
 Summary:	BSD database library for C
-Summary(pl):	Biblioteka bazodanowa z BSD dla C
+Summary(pl.UTF-8):   Biblioteka bazodanowa z BSD dla C
 Name:		db1
 Version:	1.85
 Release:	8
@@ -23,16 +23,16 @@ client/server applications. It should be installed if compatibility is
 needed with databases created with db1. This library used to be part
 of the glibc package.
 
-%description -l pl
-Berkeley Database (Berkeley DB) to zestaw narzêdzi programistycznych
-zapewniaj±cych obs³ugê baz danych w aplikacjach tradycyjnych jak i
-klient-serwer. Powinna byæ zainstalowana je¿eli potrzebna jest
-kompatybilno¶æ z bazami stworzonymi db1. Ta biblioteka by³a czê¶ci±
+%description -l pl.UTF-8
+Berkeley Database (Berkeley DB) to zestaw narzÄ™dzi programistycznych
+zapewniajÄ…cych obsÅ‚ugÄ™ baz danych w aplikacjach tradycyjnych jak i
+klient-serwer. Powinna byÄ‡ zainstalowana jeÅ¼eli potrzebna jest
+kompatybilnoÅ›Ä‡ z bazami stworzonymi db1. Ta biblioteka byÅ‚a czÄ™Å›ciÄ…
 glibc.
 
 %package devel
 Summary:	Header files for Berkeley database library
-Summary(pl):	Pliki nag³ówkowe do biblioteki Berkeley Database
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe do biblioteki Berkeley Database
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Conflicts:	glibc-devel < 2.1.90
@@ -47,18 +47,18 @@ Fixed and Variable-length record access methods.
 This package contains the header files, and documentation for building
 programs which use Berkeley DB.
 
-%description devel -l pl
-Berkeley Database (Berkeley DB) to zestaw narzêdzi programistycznych
-zapewniaj±cych obs³ugê baz danych w aplikacjach tradycyjnych jak i
-klient-serwer. Berkeley DB obs³ugje dostêp do bazy przez B-drzewa i
-funkcje mieszaj±ce ze sta³± lub zmienn± wielko¶ci± rekordu.
+%description devel -l pl.UTF-8
+Berkeley Database (Berkeley DB) to zestaw narzÄ™dzi programistycznych
+zapewniajÄ…cych obsÅ‚ugÄ™ baz danych w aplikacjach tradycyjnych jak i
+klient-serwer. Berkeley DB obsÅ‚ugje dostÄ™p do bazy przez B-drzewa i
+funkcje mieszajÄ…ce ze staÅ‚Ä… lub zmiennÄ… wielkoÅ›ciÄ… rekordu.
 
-Ten pakiet zawiera pliki nag³ówkowe i dokumentacjê do budowania
-programów u¿ywaj±cych Berkeley DB.
+Ten pakiet zawiera pliki nagÅ‚Ã³wkowe i dokumentacjÄ™ do budowania
+programÃ³w uÅ¼ywajÄ…cych Berkeley DB.
 
 %package static
 Summary:	Static libraries for Berkeley database library
-Summary(pl):	Statyczne biblioteki Berkeley Database
+Summary(pl.UTF-8):   Statyczne biblioteki Berkeley Database
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Conflicts:	glibc-static < 2.1.90
@@ -73,14 +73,14 @@ Fixed and Variable-length record access methods.
 This package contains the static libraries for building programs which
 use Berkeley DB.
 
-%description static -l pl
-Berkeley Database (Berkeley DB) to zestaw narzêdzi programistycznych
-zapewniaj±cych obs³ugê baz danych w aplikacjach tradycyjnych jak i
-klient-serwer. Berkeley DB obs³ugje dostêp do bazy przez B-drzewa i
-funkcje mieszaj±ce ze sta³± lub zmienn± wielko¶ci± rekordu.
+%description static -l pl.UTF-8
+Berkeley Database (Berkeley DB) to zestaw narzÄ™dzi programistycznych
+zapewniajÄ…cych obsÅ‚ugÄ™ baz danych w aplikacjach tradycyjnych jak i
+klient-serwer. Berkeley DB obsÅ‚ugje dostÄ™p do bazy przez B-drzewa i
+funkcje mieszajÄ…ce ze staÅ‚Ä… lub zmiennÄ… wielkoÅ›ciÄ… rekordu.
 
-Ten pakiet zawiera statyczne biblioteki do budowania programów
-u¿ywaj±cych Berkeley DB.
+Ten pakiet zawiera statyczne biblioteki do budowania programÃ³w
+uÅ¼ywajÄ…cych Berkeley DB.
 
 %prep
 %setup -q -n db.%{version}
