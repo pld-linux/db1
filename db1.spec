@@ -1,5 +1,5 @@
 Summary:	BSD database library for C
-Summary(pl.UTF-8):   Biblioteka bazodanowa z BSD dla C
+Summary(pl.UTF-8):	Biblioteka bazodanowa z BSD dla C
 Name:		db1
 Version:	1.85
 Release:	8
@@ -32,7 +32,7 @@ glibc.
 
 %package devel
 Summary:	Header files for Berkeley database library
-Summary(pl.UTF-8):   Pliki nagłówkowe do biblioteki Berkeley Database
+Summary(pl.UTF-8):	Pliki nagłówkowe do biblioteki Berkeley Database
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Conflicts:	glibc-devel < 2.1.90
@@ -58,7 +58,7 @@ programów używających Berkeley DB.
 
 %package static
 Summary:	Static libraries for Berkeley database library
-Summary(pl.UTF-8):   Statyczne biblioteki Berkeley Database
+Summary(pl.UTF-8):	Statyczne biblioteki Berkeley Database
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Conflicts:	glibc-static < 2.1.90
