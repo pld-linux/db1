@@ -1,0 +1,2 @@
+- release 7: added BuildConflicts: glibc-db1 for rebuild db1 in proper
+  environment.
